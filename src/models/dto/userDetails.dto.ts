@@ -1,7 +1,7 @@
 export class userDetailsDTO {
-  id: string;
+  id: number;
   name: string;
   login: string;
   URL: string;
-  crationAccoutDate: Date;
+  crationAccoutDate: string;
 }
