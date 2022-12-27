@@ -6,20 +6,17 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  usersList(@Query('since') since: number): string {
-    console.log(since);
-    return this.appService.getHello();
+  usersList(@Query('since') since: string): string {
+    return this.appService.getUserList(since);
   }
 
   @Get('/:username/details')
   userDetails(@Param('username') username: string): string {
-    console.log(username);
-    return this.appService.getHello();
+    return this.appService.getUserRepositories(username);
   }
 
   @Get('/:username/repos')
   userRepositories(@Param('username') username: string): string {
-    console.log(username);
-    return this.appService.getHello();
+    return this.appService.getUserDetails(username);
   }
 }
