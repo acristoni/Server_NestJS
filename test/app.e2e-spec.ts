@@ -2,6 +2,11 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { GitHubModule } from '../src/github.module';
+import {
+  mockUserDetail,
+  mockUserList,
+  mockUserRepositories,
+} from './utils/controller.mock';
 
 describe('GitHubController (e2e)', () => {
   let app: INestApplication;
@@ -15,10 +20,22 @@ describe('GitHubController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/api/users?since=number (GET)', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get('/api/users?since=1')
       .expect(200)
-      .expect('Hello World!');
+      .expect(mockUserList);
+  });
+  it('/:username/details (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/api/users/acristoni/details')
+      .expect(200)
+      .expect(mockUserDetail);
+  });
+  it('/:username/repos (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/api/users/acristoni/repos')
+      .expect(200)
+      .expect(mockUserRepositories);
   });
 });
