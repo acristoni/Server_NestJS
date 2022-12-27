@@ -68,7 +68,7 @@ export class GitHubService {
 
       return 'User without repositories';
     } catch (error) {
-      throw Error;
+      throw Error('Internal Serve Error');
     }
   }
 
@@ -88,7 +88,7 @@ export class GitHubService {
       };
       return details;
     } catch (err) {
-      throw Error;
+      throw Error('Internal Serve Error');
     }
   }
 }
