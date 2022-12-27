@@ -4,7 +4,7 @@ import { userRepositoriesDTO } from './models/dto/userRepositories.dto';
 import { usersListDto } from './models/dto/usersList.dto';
 
 @Injectable()
-export class AppService {
+export class GitHubService {
   getUserList(since: string) {
     return since;
   }

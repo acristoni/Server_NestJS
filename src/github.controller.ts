@@ -1,22 +1,22 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
-import { AppService } from './app.service';
+import { GitHubService } from './github.service';
 
 @Controller('/api/users')
-export class AppController {
-  constructor(private readonly appService: AppService) {}
+export class GitHubController {
+  constructor(private readonly GitHubService: GitHubService) {}
 
   @Get()
   usersList(@Query('since') since: string): string {
-    return this.appService.getUserList(since);
+    return this.GitHubService.getUserList(since);
   }
 
   @Get('/:username/details')
   userDetails(@Param('username') username: string): string {
-    return this.appService.getUserRepositories(username);
+    return this.GitHubService.getUserRepositories(username);
   }
 
   @Get('/:username/repos')
   userRepositories(@Param('username') username: string): string {
-    return this.appService.getUserDetails(username);
+    return this.GitHubService.getUserDetails(username);
   }
 }
