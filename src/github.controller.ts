@@ -1,6 +1,7 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
 import { GitHubService } from './github.service';
 import { userDetailsDTO } from './models/dto/userDetails.dto';
+import { RepositoryDTO } from './models/dto/userRepositories.dto';
 
 @Controller('/api/users')
 export class GitHubController {
@@ -17,7 +18,9 @@ export class GitHubController {
   }
 
   @Get('/:username/repos')
-  userRepositories(@Param('username') username: string) {
+  userRepositories(
+    @Param('username') username: string,
+  ): Promise<RepositoryDTO[] | string> {
     return this.gitHubService.getUserRepositories(username);
   }
 }

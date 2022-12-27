@@ -1,10 +1,10 @@
 export class usersListDto {
-  data: user[];
+  usersList: any[];
   pageSize: number;
   page: number;
 }
 
-class user {
+export class userDTO {
   name: string;
   URL: string;
 }

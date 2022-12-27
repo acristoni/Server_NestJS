@@ -1,9 +1,5 @@
-export class userRepositoriesDTO {
-  reporitories: Repositorie[];
-}
-
-class Repositorie {
-  id: string;
+export class RepositoryDTO {
+  id: number;
   name: string;
   URL: string;
 }
