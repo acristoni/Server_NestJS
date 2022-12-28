@@ -24,8 +24,8 @@ export class GitHubService {
 
       response.data.map((user) => {
         const userData: userDTO = {
-          name: user.login,
-          URL: user.html_url,
+          login: user.login,
+          id: user.id,
         };
 
         arrayUsers.push(userData);
@@ -81,7 +81,6 @@ export class GitHubService {
 
       const details: userDetailsDTO = {
         id: response.data.id,
-        name: response.data.name,
         login: response.data.login,
         URL: response.data.url,
         crationAccoutDate: response.data.created_at,

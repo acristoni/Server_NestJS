@@ -5,6 +5,6 @@ export class usersListDto {
 }
 
 export class userDTO {
-  name: string;
-  URL: string;
+  login: string;
+  id: string;
 }
