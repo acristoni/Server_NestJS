@@ -40,14 +40,14 @@ describe('UsersService', () => {
           .spyOn(octokitService, 'request')
           .mockReturnValue(Promise.resolve(mockUsersListResponseFromGitHub));
 
-        expect(await service.getUserList('1')).toStrictEqual(
+        expect(await service.getUserList(1)).toStrictEqual(
           mockUsersListResponse,
         );
       });
       it('Should return a error message', async () => {
         try {
           jest.spyOn(octokitService, 'request').mockRejectedValue(Error);
-          expect(await service.getUserList('1')).toStrictEqual(
+          expect(await service.getUserList(1)).toStrictEqual(
             mockUsersListResponse,
           );
         } catch (error) {

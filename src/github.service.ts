@@ -8,7 +8,7 @@ import { userDTO, usersListDto } from './models/dto/usersList.dto';
 export class GitHubService {
   constructor(private readonly octokitService: OctokitService) {}
 
-  async getUserList(since: string): Promise<usersListDto> {
+  async getUserList(since: number): Promise<usersListDto> {
     const pageSize = 30;
 
     try {
@@ -34,7 +34,7 @@ export class GitHubService {
       const userListResponse: usersListDto = {
         usersList: arrayUsers,
         pageSize: pageSize,
-        page: parseInt(since),
+        page: parseInt(since.toString()),
       };
       return userListResponse;
     } catch (error) {

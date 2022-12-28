@@ -35,7 +35,7 @@ describe('GitHubController', () => {
         .spyOn(gitHubService, 'getUserList')
         .mockReturnValue(Promise.resolve(mockUserList));
 
-      expect(await gitHubController.usersList('1')).toBe(mockUserList);
+      expect(await gitHubController.usersList(1)).toBe(mockUserList);
     });
 
     it('Shold return a user detail', async () => {
