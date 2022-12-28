@@ -5,9 +5,9 @@ import {
   mockUserDetail,
   mockUserList,
   mockUserRepositories,
-} from '../test/utils/controller.mock';
-import { GitHubController } from './github.controller';
-import { GitHubService } from './github.service';
+} from '../../test/utils/controller.mock';
+import { GitHubController } from '../github.controller';
+import { GitHubService } from '../github.service';
 
 describe('GitHubController', () => {
   let gitHubController: GitHubController;

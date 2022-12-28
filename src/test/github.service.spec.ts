@@ -8,8 +8,8 @@ import {
   mockUsersListResponse,
   mockUsersListResponseFromGitHub,
   mockUserZeroRepositoriesFromGitHub,
-} from '../test/utils/service.mock';
-import { GitHubService } from './github.service';
+} from '../../test/utils/service.mock';
+import { GitHubService } from '../github.service';
 
 describe('UsersService', () => {
   let service: GitHubService;

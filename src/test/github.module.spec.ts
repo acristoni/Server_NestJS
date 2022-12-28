@@ -1,8 +1,8 @@
 import { Test } from '@nestjs/testing';
-import { GitHubModule } from './github.module';
+import { GitHubModule } from '../github.module';
 import { OctokitModule } from 'nestjs-octokit';
-import { GitHubController } from './github.controller';
-import { GitHubService } from './github.service';
+import { GitHubController } from '../github.controller';
+import { GitHubService } from '../github.service';
 
 describe('GitHubModule', () => {
   it('should compile the module', async () => {
