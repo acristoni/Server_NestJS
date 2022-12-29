@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { OctokitService } from 'nestjs-octokit';
-import { userDetailsDTO } from './models/dto/userDetails.dto';
-import { RepositoryDTO } from './models/dto/userRepositories.dto';
-import { userDTO, usersListDto } from './models/dto/usersList.dto';
+import { userDetailsDTO } from './dtos/userDetails.dto';
+import { RepositoryDTO } from './dtos/userRepositories.dto';
+import { userDTO, usersListDto } from './dtos/usersList.dto';
 
 @Injectable()
 export class GitHubService {

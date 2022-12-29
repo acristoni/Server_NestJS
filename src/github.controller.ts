@@ -1,9 +1,9 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { GitHubService } from './github.service';
-import { userDetailsDTO } from './models/dto/userDetails.dto';
-import { RepositoryDTO } from './models/dto/userRepositories.dto';
-import { usersListDto } from './models/dto/usersList.dto';
+import { userDetailsDTO } from './dtos/userDetails.dto';
+import { RepositoryDTO } from './dtos/userRepositories.dto';
+import { usersListDto } from './dtos/usersList.dto';
 
 @ApiTags('List of users, user detail and user repositories')
 @Controller('/api/users')
