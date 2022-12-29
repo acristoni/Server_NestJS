@@ -24,7 +24,20 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This repository was developed for the project challenge proposed by the company Shaw&Partners for the vacancy of full stack developer.
+This repository contains the part of the server where I made an API that consumes the GitHub API and filters the values needed for rendering, according to business rules in the proposed challenge documentation, below are instructions for installation, for running in development mode and for unit tests.
+
+## Link to the API, where interaction with it can be performed directly by Swagger:
+
+https://github-api-challenge-shawandpartners.onrender.com/api
+
+## Link to front end repository:
+
+https://github.com/acristoni/Client_ShawAndPartners
+
+## Front end page link:
+
+https://client-shaw-and-partners.vercel.app/
 
 ## Installation
 
@@ -57,17 +70,3 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
