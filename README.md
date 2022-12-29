@@ -29,7 +29,7 @@ This repository contains the part of the server where I made an API that consume
 
 ## Link to the API, where interaction with it can be performed directly by Swagger:
 
-https://github-api-challenge-shawandpartners.onrender.com
+https://github-api-challenge-shawandpartners.onrender.com/api
 
 ## Link to front end repository:
 
