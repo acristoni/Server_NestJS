@@ -6,12 +6,12 @@ async function bootstrap() {
   const app = await NestFactory.create(GitHubModule);
 
   const config = new DocumentBuilder()
-    .setTitle('API GitHub - Shaw and Partners Project Challenge')
+    .setTitle('API GitHub - Project Challenge')
     .setDescription(
-      'API documentation of the project challenge carried out for the FullStack developer vacancy at Shaw and Partner, here you can understand how each end point works, with examples, DTOs schematics and you can interact directly with the API through this tool, thanks for the opportunity to be able to show my potential to you, I hope this is the beginning of a good partnership.',
+      'API documentation of the project challenge, here you can understand how each end point works, with examples, DTOs schematics and you can interact directly with the API through this tool, thanks for the opportunity to be able to show my potential to you, I hope this is the beginning of a good partnership.',
     )
     .setVersion('1.0')
-    .addTag('List of users, user detail and user repositories')
+    .addTag('List of users (since = pagination), user detail and user repositories')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
