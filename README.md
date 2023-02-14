@@ -35,10 +35,6 @@ https://github-api-challenge-shawandpartners.onrender.com/api
 
 https://github.com/acristoni/Client_ShawAndPartners
 
-## Front end page link:
-
-https://client-shaw-and-partners.vercel.app/
-
 ## Installation
 
 ```bash
