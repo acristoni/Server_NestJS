@@ -24,7 +24,7 @@
 
 ## Description
 
-This repository was developed for the project challenge proposed by the company Shaw&Partners for the vacancy of full stack developer.
+This repository was developed for the project challenge proposed.
 This repository contains the part of the server where I made an API that consumes the GitHub API and filters the values needed for rendering, according to business rules in the proposed challenge documentation, below are instructions for installation, for running in development mode and for unit tests.
 
 ## Link to the API, where interaction with it can be performed directly by Swagger:
